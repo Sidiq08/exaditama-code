@@ -3,35 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <title>3D Preview</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
     <style>
-body {
-  margin: 0;
-  background: transparent; /* penting */
-}
-model-viewer {
-  width: 100vw;
-  height: 100vh;
-  background-color: transparent !important; /* pastikan override */
-}
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        height: 100%;
+        overflow: hidden;
+      }
+      model-viewer {
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent !important;
+        --poster-color: transparent !important;
+      }
     </style>
   </head>
   <body>
-   <model-viewer
-  src="pv.glb"
-  camera-controls
-  auto-rotate
-  disable-zoom
-  shadow-intensity="1"
-  environment-image="neutral"
-  style="background-color: transparent;"
-  id="modelViewer"
-></model-viewer>
-  </body>
-  <script>
-  const viewer = document.getElementById('modelViewer')
-  viewer.style.background = 'transparent'
-  viewer.setAttribute('reveal', 'interaction')
-</script>
-</html>
+    <model-viewer
+      id="modelViewer"
+      src="pv.glb"
+      camera-controls
+      auto-rotate
+      disable-zoom
+      shadow-intensity="1"
+      environment-image="none"   <!-- ini penting -->
+      exposure="1.2"
+      style="background-color: transparent;"
+    ></model-viewer>
 
+    <script>
+      const viewer = document.getElementById("modelViewer");
+      // Pastikan environment dihapus biar background benar-benar transparan
+      viewer.environmentImage = null;
+      viewer.style.background = "transparent";
+      viewer.setAttribute("reveal", "interaction");
+    </script>
+  </body>
+</html>
