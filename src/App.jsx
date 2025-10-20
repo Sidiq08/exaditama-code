@@ -4,7 +4,7 @@ import { useGLTF, Environment } from '@react-three/drei'
 import * as THREE from 'three'
 
 function SceneWithCamera({ speed = 1 }) {
-  const { scene, cameras, animations } = useGLTF('/VAWT2.glb')
+  const { scene, cameras, animations } = useGLTF('/STS2.glb')
   const { set } = useThree()
   const mixer = useRef(null)
 
@@ -32,18 +32,30 @@ function SceneWithCamera({ speed = 1 }) {
 
 function App() {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: 'white' }}>
-      <Canvas gl={{ alpha: true, toneMappingExposure: 1.5 }}>
-        {/* ☀️ Matahari */}
+    <div
+      style={{
+        width: '100vw',
+        height: '100vh',
+        background: 'transparent', // 🟢 buat background div transparan
+      }}
+    >
+      <Canvas
+        gl={{ alpha: true, toneMappingExposure: 1.5 }}
+        style={{
+          background: 'transparent', // 🟢 buat canvas transparan
+        }}
+      >
+        ☀️ Matahari
         <directionalLight position={[10, 15, 10]} intensity={2.5} castShadow />
 
         {/* 🌤️ Cahaya lembut */}
         <ambientLight intensity={1.2} />
 
+        {/* Environment tanpa background */}
         <Environment preset="sunset" background={false} />
 
-        {/* 🎛️ Ubah kecepatan di sini */}
-        <SceneWithCamera speed={0.3} /> 
+        {/* 🎛️ Kecepatan animasi */}
+        <SceneWithCamera speed={1} />
       </Canvas>
     </div>
   )
