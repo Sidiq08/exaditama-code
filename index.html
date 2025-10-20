@@ -27,14 +27,14 @@
       }
     </style>
   </head>
+
   <body>
     <model-viewer
       id="modelViewer"
-      src="pv.glb"
+      src="VAWT2.glb"
       camera-controls
       autoplay
       animation-loop
-      auto-rotate
       disable-zoom
       shadow-intensity="1"
       environment-image="none"
@@ -45,21 +45,9 @@
     <script>
       const viewer = document.getElementById("modelViewer");
 
-      // pastikan background transparan
+      // Pastikan background dan environment tetap transparan
       viewer.environmentImage = null;
       viewer.style.background = "transparent";
-
-      // kalau model tidak punya animasi internal, kita kasih animasi rotasi manual
-      let angle = 0;
-      function rotateFallback() {
-        // deteksi kalau tidak ada animasi bawaan
-        if (!viewer.availableAnimations || viewer.availableAnimations.length === 0) {
-          angle += 0.2;
-          viewer.orientation = `${angle}deg 0deg 0deg`;
-        }
-        requestAnimationFrame(rotateFallback);
-      }
-      rotateFallback();
     </script>
   </body>
 </html>
