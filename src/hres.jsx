@@ -119,10 +119,17 @@ export default function App() {
         width: '100vw',
         height: '100vh',
         background: 'transparent',
+        overflow: 'hidden',
       }}
     >
-      <Canvas gl={{ alpha: true, toneMappingExposure: 1 }} style={{ background: 'transparent' }}>
-        {/* Suspense otomatis nunggu GLTF load */}
+      <Canvas
+        gl={{ alpha: true, antialias: true, preserveDrawingBuffer: true }}
+        style={{ background: 'transparent' }}
+        camera={{ position: [0, 2, 5], fov: 50 }}
+      >
+        {/* ⬇️ Tambahkan ini agar background benar-benar transparan */}
+        <color attach="background" args={['transparent']} />
+
         <Suspense fallback={<Loader />}>
           <directionalLight position={[10, 150, 10]} intensity={0.6} castShadow />
           <ambientLight intensity={0.3} />
