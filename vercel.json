@@ -1,9 +1,12 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "has": [{ "type": "host", "value": "exaditama.com" }],
-      "destination": "https://aerion.id",
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "exaditama.com" },
+        { "type": "host", "value": "www.exaditama.com" }
+      ],
+      "destination": "https://aerion.id/:1",
       "permanent": true
     }
   ]
