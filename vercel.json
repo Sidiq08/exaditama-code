@@ -1,5 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "exaditama.com" }],
+      "destination": "https://aerion.id",
+      "permanent": true
+    }
   ]
 }
