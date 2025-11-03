@@ -6,7 +6,7 @@
         { "type": "host", "value": "exaditama.com" },
         { "type": "host", "value": "www.exaditama.com" }
       ],
-      "destination": "https://aerion.id/:1",
+      "destination": "https://aerion.id/$1",
       "permanent": true
     }
   ]
