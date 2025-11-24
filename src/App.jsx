@@ -10,6 +10,7 @@ export default function App() {
         <li><Link to="/hres">Lihat HRES Model</Link></li>
         <li><Link to="/vawt">Lihat VAWT Model</Link></li>
         <li><Link to="/sts">Lihat STS Model</Link></li>
+        <li><Link to="/sts-parking">Lihat STS Parking Model</Link></li>
       </ul>
     </div>
   )
