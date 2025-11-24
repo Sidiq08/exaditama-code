@@ -49,7 +49,7 @@ function Loader() {
 
 // 🌍 Scene utama
 function SceneWithCamera({ speed = 1, autoRotateSpeed = 0.2 }) {
-  const { scene, cameras, animations } = useGLTF('/5sts-parking.glb')
+  const { scene, cameras, animations } = useGLTF('/6sts-parking.glb')
   const { set } = useThree()
   const mixer = useRef(null)
   const cameraRef = useRef(null)
