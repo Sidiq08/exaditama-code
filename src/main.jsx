@@ -6,6 +6,7 @@ import Hres from "./hres"
 import Vawt from "./vawt"
 import Sts from "./sts"
 import StsParking from "./sts-parking"
+import Sts15s from "./sts-15s"
 import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/vawt" element={<Vawt />} />
         <Route path="/sts" element={<Sts />} />
         <Route path="/sts-parking" element={<StsParking />} />
+        <Route path="/sts-15s" element={<Sts15s />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
