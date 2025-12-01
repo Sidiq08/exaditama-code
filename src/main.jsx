@@ -7,6 +7,8 @@ import Vawt from "./vawt"
 import Sts from "./sts"
 import StsParking from "./sts-parking"
 import Sts15s from "./sts-15s"
+import SetPOV from "./set-pov"
+import HresAnimate from "./hres-animate"
 import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,6 +21,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/sts" element={<Sts />} />
         <Route path="/sts-parking" element={<StsParking />} />
         <Route path="/sts-15s" element={<Sts15s />} />
+        <Route path="/set-pov" element={<SetPOV />} />
+        <Route path="/hres-animate" element={<HresAnimate />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
