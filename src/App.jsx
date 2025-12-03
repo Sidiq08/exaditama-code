@@ -14,6 +14,7 @@ export default function App() {
         <li><Link to="/sts-15s">Lihat STS 15s</Link></li>
         <li><Link to="/set-pov">Lihat Set POV</Link></li>
         <li><Link to="/hres-animate">Lihat HRES Animate</Link></li>
+        <li><Link to="/set-visible-objects">Lihat Set Visible</Link></li>
       </ul>
     </div>
   )

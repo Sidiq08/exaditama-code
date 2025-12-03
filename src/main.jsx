@@ -9,6 +9,7 @@ import StsParking from "./sts-parking"
 import Sts15s from "./sts-15s"
 import SetPOV from "./set-pov"
 import HresAnimate from "./hres-animate"
+import SetVisibleObjects from "./set-visible-objects"
 import "./index.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/sts-15s" element={<Sts15s />} />
         <Route path="/set-pov" element={<SetPOV />} />
         <Route path="/hres-animate" element={<HresAnimate />} />
+        <Route path="/set-visible-objects" element={<SetVisibleObjects />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
